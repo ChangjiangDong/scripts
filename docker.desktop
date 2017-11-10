@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=XSession
+Exec=/usr/local/bin/docker-startkde
+TryExec=/usr/local/bin/docker-startkde
+DesktopNames=KDE
+Name=Docker-Plasma
+Comment=Docker-Plasma

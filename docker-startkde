@@ -1,0 +1,2 @@
+#!/bin/zsh
+nvidia-docker run --privileged --network=host --pid=host -v /dev:/dev -v $HOME:$HOME -v /etc/group:/etc/group:ro -v /etc/shadow:/etc/shadow:ro -v /etc/passwd:/etc/passwd:ro -u $(id -u) -v /run:/run -e DISPLAY -e LANG -e SHELL -e GTK_IM_MODULE -e QT_IM_MODULE zasdfgbnmsystem/desktop startkde
