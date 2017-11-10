@@ -1,0 +1,24 @@
+#!/bin/bash
+dir=~/tmp/docker
+rm -rf $dir
+mkdir -p $dir
+cd $dir
+
+yes|docker system prune
+
+git clone https://github.com/zasdfgbnm-dockers/basic.git
+cd basic
+docker build --pull . -t zasdfgbnmsystem/basic
+docker push zasdfgbnmsystem/basic
+
+cd ..
+git clone https://github.com/zasdfgbnm-dockers/archlinux-kde.git
+cd archlinux-kde
+docker build --pull . -t zasdfgbnmsystem/archlinux-kde
+docker push zasdfgbnmsystem/archlinux-kde
+
+cd ..
+git clone https://github.com/zasdfgbnm-dockers/desktop.git
+cd desktop
+docker build --pull . -t zasdfgbnmsystem/desktop
+docker push zasdfgbnmsystem/desktop
