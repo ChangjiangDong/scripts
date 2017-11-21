@@ -1,8 +1,12 @@
 #!/bin/bash
+
+set -e
+
 dir=~/tmp/docker
 rm -rf $dir
 mkdir -p $dir
 cd $dir
+
 
 yes|docker system prune
 
