@@ -1,0 +1,11 @@
+#!/bin/bash
+
+yes | docker system prune
+cd /var/tmp
+git clone git@github.com:zasdfgbnm-dockers/desktop.git
+cd desktop
+docker build --pull . -t zasdfgbnmsystem/desktop
+cat ~/.docker/password.txt | docker login --username zasdfgbnm --password-stdin
+docker push zasdfgbnmsystem/desktop
+cd
+rm -rf /var/tmp/desktop
