@@ -2,30 +2,32 @@
 
 set -e
 
-dir=~/tmp/docker
-rm -rf $dir
-mkdir -p $dir
+# dir=~/tmp/docker
+# rm -rf $dir
+# mkdir -p $dir
+# cd $dir
+
+dir=~/dockers
 cd $dir
 
 ls
 
-
 # yes|docker system prune
 
-git clone https://github.com/zasdfgbnm-dockers/basic.git
+# git clone https://github.com/zasdfgbnm-dockers/basic.git
 cd basic
 docker build --pull . -t zasdfgbnmsystem/basic
 docker push zasdfgbnmsystem/basic
 cd ..
 
 
-git clone https://github.com/zasdfgbnm-dockers/archlinux-kde.git
+# git clone https://github.com/zasdfgbnm-dockers/archlinux-kde.git
 cd archlinux-kde
 docker build --pull . -t zasdfgbnmsystem/archlinux-kde
 docker push zasdfgbnmsystem/archlinux-kde
 cd ..
 
-git clone https://github.com/zasdfgbnm-dockers/desktop.git
+# git clone https://github.com/zasdfgbnm-dockers/desktop.git
 cd desktop
 docker build --pull . -t zasdfgbnmsystem/desktop
 docker push zasdfgbnmsystem/desktop
