@@ -10,7 +10,7 @@ cd $dir
 ls
 
 
-yes|docker system prune
+# yes|docker system prune
 
 git clone https://github.com/zasdfgbnm-dockers/basic.git
 cd basic
