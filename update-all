@@ -12,22 +12,24 @@ cd $dir
 
 ls
 
+OPTS=--no-cache
+
 # yes|docker system prune
 
 # git clone https://github.com/zasdfgbnm-dockers/basic.git
 cd basic
-docker build --no-cache --pull . -t zasdfgbnmsystem/basic
+docker build $OPTS --pull . -t zasdfgbnmsystem/basic
 docker push zasdfgbnmsystem/basic
 cd ..
 
 
 # git clone https://github.com/zasdfgbnm-dockers/archlinux-kde.git
 cd archlinux-kde
-docker build --no-cache --pull . -t zasdfgbnmsystem/archlinux-kde
+docker build $OPTS --pull . -t zasdfgbnmsystem/archlinux-kde
 docker push zasdfgbnmsystem/archlinux-kde
 cd ..
 
 # git clone https://github.com/zasdfgbnm-dockers/desktop.git
 cd desktop
-docker build --no-cache --pull . -t zasdfgbnmsystem/desktop
+docker build $OPTS --pull . -t zasdfgbnmsystem/desktop
 docker push zasdfgbnmsystem/desktop
